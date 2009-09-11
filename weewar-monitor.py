@@ -1,16 +1,17 @@
-from config import Config
-from weewar import WeeMonitor
-from alert import Alerter
-import gtk, gobject
 
-config = Config()
-monitor = WeeMonitor()
-alerter = Alerter(monitor, config)
+import gtk
+import gobject
+import os.path
+
+from alert import Alerter
+
+config = os.path.expanduser('~/.weewar-alerter')
+alerter = Alerter(config)
 
 def check():
 	alerter.watch()
 	return True
 
 check()
-gobject.timeout_add(config.interval * 1000, check)
+gobject.timeout_add(alerter.interval * 1000, check)
 gtk.main()
