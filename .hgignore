@@ -1,6 +1,10 @@
 .project
 .pydev
 
+build
+dist
+src/python_weewar_monitor.egg-info
+
 syntax: glob
 *.pyc
 *.pyo
