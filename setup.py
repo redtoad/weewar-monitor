@@ -9,7 +9,7 @@ def read(fname):
 setup(
     name='python-weewar-monitor',
     version='0.1',
-    description="A Django app that provides generic per-object-permissions for Django's auth app.",
+    description='A small GTK application watches you Weewar games for you.',
     long_description=read('README'),
     maintainer='Sebastian Rahlf',
     maintainer_email='basti AT redtoad DOT de',
@@ -23,5 +23,6 @@ setup(
         'Programming Language :: Python',
     ],
     zip_safe=False,
+    scripts = ['src/weewar-monitor'],
 )
 
