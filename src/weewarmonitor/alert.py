@@ -1,15 +1,16 @@
+
+import ConfigParser
 import gtk, gtk.glade
 import gobject
-import pynotify
-
 import os.path
-import ConfigParser
+import pynotify
 
 from weewar import AuthenticationError, ServerError, headquarter
 
+import resources
+
 pynotify.init(u"WeeWar notifications")
 
-RESOURCE_FILE = 'alerter.glade'
 CONFIG_SECTION = 'weewar'
 
 class Alerter(object):
@@ -34,7 +35,7 @@ class Alerter(object):
         self.config_file = config_file
         print 'laoading config %s...' % self.config_file
         
-        resource_xml = gtk.glade.XML(RESOURCE_FILE)
+        resource_xml = resources.alerter
         resource_xml.signal_autoconnect(self)
         self._popup_menu = resource_xml.get_widget('popup-menu')
         self._settings_dialog = resource_xml.get_widget('settings-dialog')
@@ -146,7 +147,7 @@ class Alerter(object):
         return needs_attention, games
 
     def show_icon(self):
-        self.icon = gtk.status_icon_new_from_file('tank.gif')
+        self.icon = gtk.status_icon_new_from_pixbuf(resources.tank)
         self.icon.set_tooltip(u"WeeWar Monitor")
         self.icon.connect('activate', self.on_systray_icon_activate)
         self.icon.connect('popup-menu', self.on_systray_icon_popup_menu, self._popup_menu)
