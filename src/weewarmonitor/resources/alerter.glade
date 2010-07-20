@@ -4,6 +4,8 @@
   <!-- interface-naming-policy toplevel-contextual -->
   <widget class="GtkDialog" id="settings-dialog">
     <property name="border_width">5</property>
+    <property name="resizable">False</property>
+    <property name="modal">True</property>
     <property name="window_position">center-on-parent</property>
     <property name="type_hint">dialog</property>
     <property name="has_separator">False</property>
@@ -73,7 +75,7 @@
                           <widget class="GtkLabel" id="label6">
                             <property name="visible">True</property>
                             <property name="label" translatable="yes">Get your API key from
-http://weewar.com/apiToken</property>
+&lt;a href="http://weewar.com/apiToken"&gt;http://weewar.com/apiToken&lt;/a&gt;</property>
                             <property name="use_markup">True</property>
                             <property name="justify">center</property>
                             <property name="selectable">True</property>
@@ -168,7 +170,7 @@ http://weewar.com/apiToken</property>
             <property name="layout_style">end</property>
             <child>
               <widget class="GtkButton" id="cancel_button">
-                <property name="label" translatable="yes">gtk-cancel</property>
+                <property name="label">gtk-cancel</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -183,7 +185,7 @@ http://weewar.com/apiToken</property>
             </child>
             <child>
               <widget class="GtkButton" id="apply_button">
-                <property name="label" translatable="yes">gtk-apply</property>
+                <property name="label">gtk-apply</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -208,6 +210,11 @@ http://weewar.com/apiToken</property>
   </widget>
   <widget class="GtkMenu" id="popup-menu">
     <property name="visible">True</property>
+    <child>
+      <widget class="GtkSeparatorMenuItem" id="separator">
+        <property name="visible">True</property>
+      </widget>
+    </child>
     <child>
       <widget class="GtkImageMenuItem" id="preferences">
         <property name="label">gtk-preferences</property>
