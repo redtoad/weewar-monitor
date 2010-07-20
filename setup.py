@@ -19,8 +19,12 @@ setup(
     packages=find_packages('src'),
     package_dir = {'': 'src'},
     classifiers=[
-        'Development Status :: 3 - Alpha',
+        'Development Status :: 4 - Beta',
         'Programming Language :: Python',
+        'License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)',
+        'Topic :: Games/Entertainment :: Turn Based Strategy',
+        'Environment :: X11 Applications :: GTK', 
+        'Topic :: System :: Monitoring',
     ],
     zip_safe=False,
     scripts = ['src/weewar-monitor'],
