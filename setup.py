@@ -7,15 +7,15 @@ def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
 setup(
-    name='python-weewar-monitor',
-    version='0.1',
+    name='weewar-monitor',
+    version='0.1b1',
     description='A small GTK application watches you Weewar games for you.',
     long_description=read('README'),
     maintainer='Sebastian Rahlf',
     maintainer_email='basti AT redtoad DOT de',
     license='GPLv3',
-    url='http://bitbucket.org/basti/python-weewar-monitor/',
-    download_url='http://bitbucket.org/basti/python-weewar-monitor/downloads/',
+    url='http://bitbucket.org/basti/weewar-monitor/',
+    download_url='http://bitbucket.org/basti/weewar-monitor/downloads/',
     packages=find_packages('src'),
     package_dir = {'': 'src'},
     classifiers=[
