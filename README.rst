@@ -1,6 +1,6 @@
-=====================
-python-weewar-monitor
-=====================
+==============
+weewar-monitor
+==============
 
 This is a small GTK application that lives in your system tray and periodically 
 checks state of your ongoing Weewar_ games. If a game requires attention, a 
